@@ -1,21 +1,21 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { NextCardProps } from './types';
-import './NextCard.css';
+import React from "react";
+import { NextCardProps } from "./types";
+import "./NextCard.css";
 
 // Clases CSS como constantes para evitar errores de tipado
 const styles = {
-  card: 'nextcard-card',
-  clickable: 'nextcard-clickable',
-  default: 'nextcard-default',
-  primary: 'nextcard-primary',
-  secondary: 'nextcard-secondary',
-  outlined: 'nextcard-outlined',
-  header: 'nextcard-header',
-  title: 'nextcard-title',
-  description: 'nextcard-description',
-  content: 'nextcard-content',
+  card: "nextcard-card",
+  clickable: "nextcard-clickable",
+  default: "nextcard-default",
+  primary: "nextcard-primary",
+  secondary: "nextcard-secondary",
+  outlined: "nextcard-outlined",
+  header: "nextcard-header",
+  title: "nextcard-title",
+  description: "nextcard-description",
+  content: "nextcard-content",
 };
 
 /**

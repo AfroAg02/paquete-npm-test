@@ -13,12 +13,12 @@ npm install prueba-npm-nextjs
 const nextConfig = {
   experimental: {
     // Habilitar las características experimentales de Next.js 15
-    ppr: true,  // Partial Pre-rendering (si lo usas)
+    ppr: true, // Partial Pre-rendering (si lo usas)
     after: true, // After callbacks (si los usas)
   },
   // Transpile el paquete npm para que funcione correctamente
-  transpilePackages: ['prueba-npm-nextjs'],
-}
+  transpilePackages: ["prueba-npm-nextjs"],
+};
 
 module.exports = nextConfig;
 ```
@@ -28,12 +28,12 @@ module.exports = nextConfig;
 ### Layout Principal (app/layout.tsx)
 
 ```tsx
-import type { Metadata } from 'next';
-import './globals.css';
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Mi App con NextCard y NextButton',
-  description: 'Una aplicación usando componentes optimizados para Next.js 15',
+  title: "Mi App con NextCard y NextButton",
+  description: "Una aplicación usando componentes optimizados para Next.js 15",
 };
 
 export default function RootLayout({
@@ -52,29 +52,33 @@ export default function RootLayout({
 ### Página de ejemplo (app/page.tsx)
 
 ```tsx
-import { NextCard, NextButton } from 'prueba-npm-nextjs';
+import { NextCard, NextButton } from "prueba-npm-nextjs";
 
 export default function Home() {
   return (
-    <main style={{ padding: '40px' }}>
+    <main style={{ padding: "40px" }}>
       <h1>Componentes Next.js 15</h1>
-      
-      <div style={{ display: 'grid', gap: '20px', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+
+      <div
+        style={{
+          display: "grid",
+          gap: "20px",
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+        }}
+      >
         <NextCard
           title="Bienvenido"
           description="Esta es una demostración de NextCard"
           variant="primary"
         >
           <p>Contenido de la tarjeta aquí</p>
-          <NextButton variant="outline">
-            Acción
-          </NextButton>
+          <NextButton variant="outline">Acción</NextButton>
         </NextCard>
-        
+
         <NextCard
           title="Segunda Tarjeta"
           variant="outlined"
-          onClick={() => alert('¡Tarjeta clickeada!')}
+          onClick={() => alert("¡Tarjeta clickeada!")}
         >
           <p>Esta tarjeta es clickeable</p>
         </NextCard>
@@ -87,10 +91,10 @@ export default function Home() {
 ## Componente Interactivo (app/components/InteractiveExample.tsx)
 
 ```tsx
-'use client';
+"use client";
 
-import { NextCard, NextButton } from 'prueba-npm-nextjs';
-import { useState } from 'react';
+import { NextCard, NextButton } from "prueba-npm-nextjs";
+import { useState } from "react";
 
 export default function InteractiveExample() {
   const [count, setCount] = useState(0);
@@ -98,8 +102,8 @@ export default function InteractiveExample() {
 
   const handleAsync = async () => {
     setLoading(true);
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setCount(prev => prev + 1);
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+    setCount((prev) => prev + 1);
     setLoading(false);
   };
 
@@ -109,26 +113,19 @@ export default function InteractiveExample() {
       description={`Contador: ${count}`}
       variant="secondary"
     >
-      <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+      <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
         <NextButton
           variant="primary"
-          onClick={() => setCount(prev => prev + 1)}
+          onClick={() => setCount((prev) => prev + 1)}
         >
           +1
         </NextButton>
-        
-        <NextButton
-          variant="secondary"
-          onClick={() => setCount(0)}
-        >
+
+        <NextButton variant="secondary" onClick={() => setCount(0)}>
           Reset
         </NextButton>
-        
-        <NextButton
-          variant="outline"
-          loading={loading}
-          onClick={handleAsync}
-        >
+
+        <NextButton variant="outline" loading={loading} onClick={handleAsync}>
           Async +1
         </NextButton>
       </div>

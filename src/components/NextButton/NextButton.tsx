@@ -1,25 +1,25 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { NextButtonProps } from '../NextCard/types';
-import './NextButton.css';
+import React from "react";
+import { NextButtonProps } from "../NextCard/types";
+import "./NextButton.css";
 
 // Clases CSS como constantes para evitar errores de tipado
 const styles = {
-  button: 'nextbutton-button',
-  sm: 'nextbutton-sm',
-  md: 'nextbutton-md',
-  lg: 'nextbutton-lg',
-  default: 'nextbutton-default',
-  primary: 'nextbutton-primary',
-  secondary: 'nextbutton-secondary',
-  outline: 'nextbutton-outline',
-  ghost: 'nextbutton-ghost',
-  loading: 'nextbutton-loading',
-  spinner: 'nextbutton-spinner',
-  spinnerIcon: 'nextbutton-spinner-icon',
-  icon: 'nextbutton-icon',
-  content: 'nextbutton-content',
+  button: "nextbutton-button",
+  sm: "nextbutton-sm",
+  md: "nextbutton-md",
+  lg: "nextbutton-lg",
+  default: "nextbutton-default",
+  primary: "nextbutton-primary",
+  secondary: "nextbutton-secondary",
+  outline: "nextbutton-outline",
+  ghost: "nextbutton-ghost",
+  loading: "nextbutton-loading",
+  spinner: "nextbutton-spinner",
+  spinnerIcon: "nextbutton-spinner-icon",
+  icon: "nextbutton-icon",
+  content: "nextbutton-content",
 };
 
 /**
