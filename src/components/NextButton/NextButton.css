@@ -1,0 +1,157 @@
+.nextbutton-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-family: inherit;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.nextbutton-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.nextbutton-button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Tamaños */
+.nextbutton-button.nextbutton-sm {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  min-height: 32px;
+}
+
+.nextbutton-button.nextbutton-md {
+  padding: 12px 24px;
+  font-size: 0.875rem;
+  min-height: 40px;
+}
+
+.nextbutton-button.nextbutton-lg {
+  padding: 16px 32px;
+  font-size: 1rem;
+  min-height: 48px;
+}
+
+/* Variantes */
+.nextbutton-button.nextbutton-default {
+  background: #f3f4f6;
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+.nextbutton-button.nextbutton-default:hover:not(:disabled) {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+.nextbutton-button.nextbutton-primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.nextbutton-button.nextbutton-primary:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.nextbutton-button.nextbutton-secondary {
+  background: #6b7280;
+  color: white;
+}
+
+.nextbutton-button.nextbutton-secondary:hover:not(:disabled) {
+  background: #4b5563;
+}
+
+.nextbutton-button.nextbutton-outline {
+  background: transparent;
+  color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.nextbutton-button.nextbutton-outline:hover:not(:disabled) {
+  background: #3b82f6;
+  color: white;
+}
+
+.nextbutton-button.nextbutton-ghost {
+  background: transparent;
+  color: #374151;
+  border-color: transparent;
+}
+
+.nextbutton-button.nextbutton-ghost:hover:not(:disabled) {
+  background: #f3f4f6;
+}
+
+/* Elementos internos */
+.nextbutton-spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nextbutton-spinner-icon {
+  width: 16px;
+  height: 16px;
+  animation: nextbutton-spin 1s linear infinite;
+}
+
+.nextbutton-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nextbutton-content {
+  display: inline-flex;
+  align-items: center;
+}
+
+.nextbutton-button.nextbutton-loading .nextbutton-content {
+  opacity: 0.7;
+}
+
+/* Animaciones */
+@keyframes nextbutton-spin {
+  from {
+    transform: rotate(0deg);
+    stroke-dashoffset: 32;
+  }
+  to {
+    transform: rotate(360deg);
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .nextbutton-button.nextbutton-default {
+    background: #374151;
+    color: #f9fafb;
+    border-color: #4b5563;
+  }
+  
+  .nextbutton-button.nextbutton-default:hover:not(:disabled) {
+    background: #4b5563;
+    border-color: #6b7280;
+  }
+  
+  .nextbutton-button.nextbutton-ghost {
+    color: #f9fafb;
+  }
+  
+  .nextbutton-button.nextbutton-ghost:hover:not(:disabled) {
+    background: #374151;
+  }
+}

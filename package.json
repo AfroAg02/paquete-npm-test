@@ -1,11 +1,13 @@
 {
   "name": "prueba-npm-nextjs",
-  "version": "1.0.2",
-  "description": "Un paquete de ejemplo con un componente React para usar en Next.js",
+  "version": "1.0.3",
+  "description": "Un paquete de componentes React optimizado para Next.js 15 con App Router",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     }
@@ -14,13 +16,27 @@
   "author": "Tu Nombre",
   "keywords": [
     "nextjs",
+    "nextjs-15",
     "react",
     "componente",
-    "ejemplo"
+    "app-router",
+    "typescript"
   ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "type-check": "tsc --noEmit"
+  },
   "peerDependencies": {
     "react": ">=18 <20",
-    "react-dom": ">=18 <20"
+    "react-dom": ">=18 <20",
+    "next": ">=14"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
   },
   "files": [
     "dist",

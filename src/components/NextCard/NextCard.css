@@ -1,0 +1,104 @@
+.nextcard-card {
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+  background: white;
+  border: 1px solid #e5e7eb;
+  width: 100%;
+  max-width: 400px;
+}
+
+.nextcard-card.nextcard-clickable {
+  cursor: pointer;
+}
+
+.nextcard-card.nextcard-clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.nextcard-card.nextcard-clickable:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Variantes */
+.nextcard-card.nextcard-default {
+  background: white;
+  border-color: #e5e7eb;
+}
+
+.nextcard-card.nextcard-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+}
+
+.nextcard-card.nextcard-secondary {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.nextcard-card.nextcard-outlined {
+  background: transparent;
+  border: 2px solid #3b82f6;
+}
+
+/* Elementos internos */
+.nextcard-header {
+  margin-bottom: 16px;
+}
+
+.nextcard-title {
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: inherit;
+}
+
+.nextcard-description {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #6b7280;
+}
+
+.nextcard-card.nextcard-primary .nextcard-description {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.nextcard-content {
+  margin-top: 16px;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .nextcard-card {
+    padding: 16px;
+    max-width: 100%;
+  }
+  
+  .nextcard-title {
+    font-size: 1.125rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .nextcard-card.nextcard-default {
+    background: #1f2937;
+    border-color: #374151;
+    color: white;
+  }
+  
+  .nextcard-card.nextcard-secondary {
+    background: #111827;
+    border-color: #4b5563;
+  }
+  
+  .nextcard-description {
+    color: #9ca3af;
+  }
+}
