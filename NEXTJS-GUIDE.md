@@ -3,7 +3,7 @@
 ## Instalación en tu proyecto Next.js 15
 
 ```bash
-npm install prueba-npm-nextjs
+npm install afro-npm-nextjs
 ```
 
 ## Configuración en next.config.js
@@ -17,7 +17,7 @@ const nextConfig = {
     after: true, // After callbacks (si los usas)
   },
   // Transpile el paquete npm para que funcione correctamente
-  transpilePackages: ["prueba-npm-nextjs"],
+  transpilePackages: ["afro-npm-nextjs"],
 };
 
 module.exports = nextConfig;
@@ -52,7 +52,7 @@ export default function RootLayout({
 ### Página de ejemplo (app/page.tsx)
 
 ```tsx
-import { NextCard, NextButton } from "prueba-npm-nextjs";
+import { NextCard, NextButton } from "afro-npm-nextjs";
 
 export default function Home() {
   return (
@@ -93,7 +93,7 @@ export default function Home() {
 ```tsx
 "use client";
 
-import { NextCard, NextButton } from "prueba-npm-nextjs";
+import { NextCard, NextButton } from "afro-npm-nextjs";
 import { useState } from "react";
 
 export default function InteractiveExample() {

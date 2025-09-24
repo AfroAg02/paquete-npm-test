@@ -1,6 +1,6 @@
 "use client";
 
-import { NextCard, NextButton } from "prueba-npm-nextjs";
+import { NextCard, NextButton } from "afro-npm-nextjs";
 import { useState } from "react";
 
 /**
@@ -194,7 +194,7 @@ export default function ExamplePage() {
         }}
       >
         <p>
-          Ejemplo creado con componentes de <strong>prueba-npm-nextjs</strong>
+          Ejemplo creado con componentes de <strong>afro-npm-nextjs</strong>
         </p>
         <p>Optimizado para Next.js 15 con App Router 🚀</p>
       </footer>

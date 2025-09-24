@@ -1,6 +1,6 @@
-# Guía de Solución de Problemas - prueba-npm-nextjs
+# Guía de Solución de Problemas - afro-npm-nextjs
 
-## Error: "Module not found: Can't resolve 'prueba-npm-nextjs'"
+## Error: "Module not found: Can't resolve 'afro-npm-nextjs'"
 
 ### 🔍 Diagnóstico
 
@@ -29,7 +29,7 @@ Crea o actualiza tu `next.config.js`:
 ```javascript
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ["prueba-npm-nextjs"],
+  transpilePackages: ["afro-npm-nextjs"],
   experimental: {
     esmExternals: "loose",
   },
@@ -48,7 +48,7 @@ En tu `package.json`, asegúrate de que las versiones sean compatibles:
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "next": "15.3.2",
-    "prueba-npm-nextjs": "^1.0.4"
+    "afro-npm-nextjs": "^1.0.4"
   }
 }
 ```
@@ -68,7 +68,7 @@ export default function ComponentsPage() {
   useEffect(() => {
     const loadComponents = async () => {
       try {
-        const { NextCard, NextButton } = await import("prueba-npm-nextjs");
+        const { NextCard, NextButton } = await import("afro-npm-nextjs");
         setComponents({ NextCard, NextButton });
       } catch (error) {
         console.error("Error loading components:", error);
@@ -98,7 +98,7 @@ export default function ComponentsPage() {
 
 ```tsx
 // Solo para Server Components
-const { NextCard } = require("prueba-npm-nextjs");
+const { NextCard } = require("afro-npm-nextjs");
 
 export default function ServerComponent() {
   return <NextCard title="Server Component">Contenido del servidor</NextCard>;
@@ -116,7 +116,7 @@ const nextConfig = {
   webpack: (config, { isServer }) => {
     config.resolve.alias = {
       ...config.resolve.alias,
-      "prueba-npm-nextjs": require.resolve("prueba-npm-nextjs"),
+      "afro-npm-nextjs": require.resolve("afro-npm-nextjs"),
     };
 
     return config;
@@ -131,20 +131,20 @@ module.exports = nextConfig;
 1. **Verificar instalación:**
 
    ```bash
-   npm list prueba-npm-nextjs
+   npm list afro-npm-nextjs
    ```
 
 2. **Verificar archivos del paquete:**
 
    ```bash
-   ls node_modules/prueba-npm-nextjs/
+   ls node_modules/afro-npm-nextjs/
    ```
 
 3. **Probar import en Node.js:**
 
    ```javascript
    // test.js
-   const pkg = require("prueba-npm-nextjs");
+   const pkg = require("afro-npm-nextjs");
    console.log(pkg);
    ```
 
@@ -165,7 +165,7 @@ Para tu proyecto `zasadmin` con Next.js 15.3.2 y React 19:
 
 ```bash
 # 1. Actualizar el paquete
-npm install prueba-npm-nextjs@latest
+npm install afro-npm-nextjs@latest
 
 # 2. Agregar transpilePackages a next.config.js
 # 3. Reiniciar el servidor de desarrollo
@@ -179,5 +179,5 @@ Si el problema persiste, el paquete se puede usar localmente:
 npm link
 
 # En tu proyecto zasadmin
-npm link prueba-npm-nextjs
+npm link afro-npm-nextjs
 ```

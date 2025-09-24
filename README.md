@@ -1,4 +1,4 @@
-# prueba-npm-nextjs
+# afro-npm-nextjs
 
 Un paquete de componentes React optimizado para **Next.js 15** con **App Router**. Incluye componentes modernos y reutilizables con soporte completo para TypeScript.
 
@@ -15,11 +15,11 @@ Un paquete de componentes React optimizado para **Next.js 15** con **App Router*
 ## 📦 Instalación
 
 ```bash
-npm install prueba-npm-nextjs
+npm install afro-npm-nextjs
 # o
-yarn add prueba-npm-nextjs
+yarn add afro-npm-nextjs
 # o
-pnpm add prueba-npm-nextjs
+pnpm add afro-npm-nextjs
 ```
 
 ## 🔧 Uso
@@ -29,7 +29,7 @@ pnpm add prueba-npm-nextjs
 Un componente de tarjeta versátil y moderno:
 
 ```tsx
-import { NextCard } from "prueba-npm-nextjs";
+import { NextCard } from "afro-npm-nextjs";
 
 export default function Page() {
   return (
@@ -60,7 +60,7 @@ export default function Page() {
 Un botón moderno con múltiples variantes y estados:
 
 ```tsx
-import { NextButton } from "prueba-npm-nextjs";
+import { NextButton } from "afro-npm-nextjs";
 
 export default function Page() {
   return (
@@ -119,7 +119,7 @@ Los componentes soportan automáticamente el modo oscuro usando `prefers-color-s
 ```tsx
 "use client";
 
-import { NextCard, NextButton } from "prueba-npm-nextjs";
+import { NextCard, NextButton } from "afro-npm-nextjs";
 import { useState } from "react";
 
 export default function Example() {

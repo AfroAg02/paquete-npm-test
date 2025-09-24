@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Configuración para transpilar el paquete npm
-  transpilePackages: ["prueba-npm-nextjs"],
+  transpilePackages: ["afro-npm-nextjs"],
 
   // Configuración experimental para Next.js 15
   experimental: {

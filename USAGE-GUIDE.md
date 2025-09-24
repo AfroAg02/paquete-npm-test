@@ -1,9 +1,9 @@
-# Guía de Uso - prueba-npm-nextjs v1.0.5
+# Guía de Uso - afro-npm-nextjs v1.0.5
 
 ## 📦 Instalación
 
 ```bash
-npm install prueba-npm-nextjs@1.0.5
+npm install afro-npm-nextjs@1.0.5
 ```
 
 ## 🚀 Importación en tu proyecto Next.js
@@ -11,7 +11,7 @@ npm install prueba-npm-nextjs@1.0.5
 ### Método 1: Named Imports (Recomendado)
 
 ```tsx
-import { NextCard, NextButton } from "prueba-npm-nextjs";
+import { NextCard, NextButton } from "afro-npm-nextjs";
 
 export default function Page() {
   return (
@@ -25,7 +25,7 @@ export default function Page() {
 ### Método 2: Default Import
 
 ```tsx
-import Components from "prueba-npm-nextjs";
+import Components from "afro-npm-nextjs";
 
 export default function Page() {
   const { NextCard, NextButton } = Components;
@@ -49,7 +49,7 @@ export default function Page() {
   const [Components, setComponents] = useState(null);
 
   useEffect(() => {
-    import("prueba-npm-nextjs")
+    import("afro-npm-nextjs")
       .then(({ NextCard, NextButton }) => {
         setComponents({ NextCard, NextButton });
       })
@@ -75,7 +75,7 @@ export default function Page() {
 ```javascript
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ["prueba-npm-nextjs"],
+  transpilePackages: ["afro-npm-nextjs"],
   experimental: {
     esmExternals: "loose",
   },
@@ -94,7 +94,7 @@ import {
   NextButton,
   NextCardProps,
   NextButtonProps,
-} from "prueba-npm-nextjs";
+} from "afro-npm-nextjs";
 
 // Usar los tipos en tus propios componentes
 interface MyComponentProps {
@@ -109,7 +109,7 @@ Si tienes problemas, verifica que la instalación sea correcta:
 
 ```javascript
 // test.js
-const { NextCard, NextButton } = require("prueba-npm-nextjs");
+const { NextCard, NextButton } = require("afro-npm-nextjs");
 console.log("NextCard:", typeof NextCard); // debería ser 'function'
 console.log("NextButton:", typeof NextButton); // debería ser 'function'
 ```
@@ -119,7 +119,7 @@ console.log("NextButton:", typeof NextButton); // debería ser 'function'
 ### Página básica
 
 ```tsx
-import { NextCard, NextButton } from "prueba-npm-nextjs";
+import { NextCard, NextButton } from "afro-npm-nextjs";
 
 export default function HomePage() {
   return (
@@ -160,7 +160,7 @@ export default function HomePage() {
 ```tsx
 "use client";
 
-import { NextCard, NextButton } from "prueba-npm-nextjs";
+import { NextCard, NextButton } from "afro-npm-nextjs";
 import { useState } from "react";
 
 export default function InteractiveExample() {
@@ -220,7 +220,7 @@ export default function InteractiveExample() {
 
    ```javascript
    module.exports = {
-     transpilePackages: ["prueba-npm-nextjs"],
+     transpilePackages: ["afro-npm-nextjs"],
    };
    ```
 
@@ -231,12 +231,12 @@ export default function InteractiveExample() {
 1. **Verificar instalación:**
 
    ```bash
-   npm list prueba-npm-nextjs
+   npm list afro-npm-nextjs
    ```
 
 2. **Reinstalar específicamente:**
    ```bash
-   npm install prueba-npm-nextjs@1.0.5
+   npm install afro-npm-nextjs@1.0.5
    ```
 
 ## 🎉 Características disponibles
