@@ -16,20 +16,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-            node-version: '18'
-            registry-url: 'https://registry.npmjs.org'
-
-      - name: Install (si tuvieras dependencias)
-        run: npm install
-
-      - name: Verificar versión no publicada
-        run: |
-          CURRENT_VERSION=$(node -p "require('./package.json').version")
-          NAME=$(node -p "require('./package.json').name")
-          if npm view "$NAME@$CURRENT_VERSION" version > /dev/null 2>&1; then
-            echo "La versión $CURRENT_VERSION ya existe en npm. Debes incrementarla."
-            exit 1
-          fi
+          node-version: "18"
+          registry-url: "https://registry.npmjs.org"
 
       - name: Publicar
         run: npm publish
