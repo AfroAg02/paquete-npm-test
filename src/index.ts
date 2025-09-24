@@ -1,7 +1,10 @@
 // Importaciones principales
-import { NextCard } from './components/NextCard/NextCard';
-import { NextButton } from './components/NextButton/NextButton';
-import type { NextCardProps, NextButtonProps } from './components/NextCard/types';
+import { NextCard } from "./components/NextCard/NextCard";
+import { NextButton } from "./components/NextButton/NextButton";
+import type {
+  NextCardProps,
+  NextButtonProps,
+} from "./components/NextCard/types";
 
 // Exportación named (recomendada)
 export { NextCard, NextButton };
@@ -14,6 +17,6 @@ export default {
 };
 
 // Re-exportación de todo para máxima compatibilidad
-export * from './components/NextCard/NextCard';
-export * from './components/NextButton/NextButton';
-export * from './components/NextCard/types';
+export * from "./components/NextCard/NextCard";
+export * from "./components/NextButton/NextButton";
+export * from "./components/NextCard/types";

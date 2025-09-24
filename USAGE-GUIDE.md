@@ -11,7 +11,7 @@ npm install prueba-npm-nextjs@1.0.5
 ### Método 1: Named Imports (Recomendado)
 
 ```tsx
-import { NextCard, NextButton } from 'prueba-npm-nextjs';
+import { NextCard, NextButton } from "prueba-npm-nextjs";
 
 export default function Page() {
   return (
@@ -25,11 +25,11 @@ export default function Page() {
 ### Método 2: Default Import
 
 ```tsx
-import Components from 'prueba-npm-nextjs';
+import Components from "prueba-npm-nextjs";
 
 export default function Page() {
   const { NextCard, NextButton } = Components;
-  
+
   return (
     <NextCard title="Mi Tarjeta" variant="primary">
       <NextButton variant="outline">Click me</NextButton>
@@ -41,15 +41,15 @@ export default function Page() {
 ### Método 3: Import Dinámico (si hay problemas de resolución)
 
 ```tsx
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export default function Page() {
   const [Components, setComponents] = useState(null);
 
   useEffect(() => {
-    import('prueba-npm-nextjs')
+    import("prueba-npm-nextjs")
       .then(({ NextCard, NextButton }) => {
         setComponents({ NextCard, NextButton });
       })
@@ -75,9 +75,9 @@ export default function Page() {
 ```javascript
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ['prueba-npm-nextjs'],
+  transpilePackages: ["prueba-npm-nextjs"],
   experimental: {
-    esmExternals: 'loose',
+    esmExternals: "loose",
   },
 };
 
@@ -89,7 +89,12 @@ module.exports = nextConfig;
 Los tipos están incluidos automáticamente:
 
 ```tsx
-import { NextCard, NextButton, NextCardProps, NextButtonProps } from 'prueba-npm-nextjs';
+import {
+  NextCard,
+  NextButton,
+  NextCardProps,
+  NextButtonProps,
+} from "prueba-npm-nextjs";
 
 // Usar los tipos en tus propios componentes
 interface MyComponentProps {
@@ -104,9 +109,9 @@ Si tienes problemas, verifica que la instalación sea correcta:
 
 ```javascript
 // test.js
-const { NextCard, NextButton } = require('prueba-npm-nextjs');
-console.log('NextCard:', typeof NextCard); // debería ser 'function'
-console.log('NextButton:', typeof NextButton); // debería ser 'function'
+const { NextCard, NextButton } = require("prueba-npm-nextjs");
+console.log("NextCard:", typeof NextCard); // debería ser 'function'
+console.log("NextButton:", typeof NextButton); // debería ser 'function'
 ```
 
 ## 🎯 Ejemplos de uso completos
@@ -114,13 +119,13 @@ console.log('NextButton:', typeof NextButton); // debería ser 'function'
 ### Página básica
 
 ```tsx
-import { NextCard, NextButton } from 'prueba-npm-nextjs';
+import { NextCard, NextButton } from "prueba-npm-nextjs";
 
 export default function HomePage() {
   return (
     <div className="p-8">
       <h1>Mi Aplicación</h1>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
         <NextCard
           title="Bienvenido"
@@ -136,7 +141,7 @@ export default function HomePage() {
         <NextCard
           title="Características"
           variant="outlined"
-          onClick={() => alert('¡Tarjeta clickeada!')}
+          onClick={() => alert("¡Tarjeta clickeada!")}
         >
           <ul>
             <li>✅ Next.js 15</li>
@@ -153,10 +158,10 @@ export default function HomePage() {
 ### Componente interactivo
 
 ```tsx
-'use client';
+"use client";
 
-import { NextCard, NextButton } from 'prueba-npm-nextjs';
-import { useState } from 'react';
+import { NextCard, NextButton } from "prueba-npm-nextjs";
+import { useState } from "react";
 
 export default function InteractiveExample() {
   const [count, setCount] = useState(0);
@@ -164,8 +169,8 @@ export default function InteractiveExample() {
 
   const handleAsyncAction = async () => {
     setLoading(true);
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setCount(prev => prev + 1);
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+    setCount((prev) => prev + 1);
     setLoading(false);
   };
 
@@ -178,15 +183,12 @@ export default function InteractiveExample() {
       <div className="flex gap-2 mt-4">
         <NextButton
           variant="primary"
-          onClick={() => setCount(prev => prev + 1)}
+          onClick={() => setCount((prev) => prev + 1)}
         >
           +1
         </NextButton>
 
-        <NextButton
-          variant="secondary"
-          onClick={() => setCount(0)}
-        >
+        <NextButton variant="secondary" onClick={() => setCount(0)}>
           Reset
         </NextButton>
 
@@ -208,15 +210,17 @@ export default function InteractiveExample() {
 ### Error: "Module not found"
 
 1. **Limpiar caché:**
+
    ```bash
    rm -rf node_modules package-lock.json
    npm install
    ```
 
 2. **Verificar next.config.js:**
+
    ```javascript
    module.exports = {
-     transpilePackages: ['prueba-npm-nextjs'],
+     transpilePackages: ["prueba-npm-nextjs"],
    };
    ```
 
@@ -225,6 +229,7 @@ export default function InteractiveExample() {
 ### Error: "Cannot resolve module"
 
 1. **Verificar instalación:**
+
    ```bash
    npm list prueba-npm-nextjs
    ```
