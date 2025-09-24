@@ -1,7 +1,12 @@
 {
   "name": "afro-npm-nextjs",
-  "version": "1.0.9",
   "description": "Un paquete de componentes React optimizado para Next.js 15 con App Router",
+  "version": "1.1.0",
+  "license": "MIT",
+  "files": [
+    "dist/",
+    "README.md"
+  ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -17,7 +22,6 @@
   "sideEffects": [
     "**/*.css"
   ],
-  "license": "MIT",
   "author": "Tu Nombre",
   "keywords": [
     "nextjs",
@@ -42,9 +46,5 @@
     "@types/react-dom": "^18.2.0",
     "tsup": "^8.0.0",
     "typescript": "^5.0.0"
-  },
-  "files": [
-    "dist",
-    "README.md"
-  ]
+  }
 }
