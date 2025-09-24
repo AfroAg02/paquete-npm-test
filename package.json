@@ -1,11 +1,16 @@
 {
   "name": "prueba-npm-nextjs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Un paquete de ejemplo con un componente React para usar en Next.js",
-  "main": "index.js",
-  "module": "index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "license": "MIT",
-  "type": "module",
   "author": "Tu Nombre",
   "keywords": [
     "nextjs",
@@ -18,8 +23,7 @@
     "react-dom": ">=18 <20"
   },
   "files": [
-    "index.js",
-    "MyComponent.js",
+    "dist",
     "README.md"
   ]
 }
