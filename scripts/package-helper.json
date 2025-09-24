@@ -1,0 +1,10 @@
+{
+  "name": "prepare-package",
+  "version": "1.0.0",
+  "scripts": {
+    "prepare": "npm run build && npm run test",
+    "test": "node test/import-test.js",
+    "pack-dry": "npm pack --dry-run",
+    "pack": "npm pack"
+  }
+}
