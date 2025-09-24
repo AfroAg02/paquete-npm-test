@@ -1,10 +1,11 @@
 {
   "name": "prueba-npm-nextjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Un paquete de ejemplo con un componente React para usar en Next.js",
   "main": "index.js",
   "module": "index.js",
   "license": "MIT",
+  "type": "module",
   "author": "Tu Nombre",
   "keywords": [
     "nextjs",
