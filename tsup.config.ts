@@ -5,11 +5,13 @@ export default defineConfig({
   format: ["cjs", "esm"],
   dts: true,
   splitting: false,
-  sourcemap: true,
+  sourcemap: false,
   clean: true,
   external: ["react", "react-dom", "next"],
   banner: {
     js: '"use client";',
   },
   injectStyle: true,
+  target: "es2020",
+  platform: "browser",
 });

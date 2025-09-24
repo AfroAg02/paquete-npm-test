@@ -1,38 +1,14 @@
-import { NextCard, NextButton } from "../dist/index.js";
-import React from "react";
+// Test simple para verificar que el paquete se construye correctamente
+const { NextCard, NextButton } = require("../dist/index.js");
 
-// Ejemplo básico de uso de los componentes
-export default function TestExample() {
-  return React.createElement("div", { style: { padding: "20px" } }, [
-    React.createElement(
-      NextCard,
-      {
-        key: "card1",
-        title: "Ejemplo de NextCard",
-        description: "Este es un componente de tarjeta",
-        variant: "primary",
-      },
-      [
-        React.createElement(
-          NextButton,
-          {
-            key: "btn1",
-            variant: "outline",
-            onClick: () => console.log("¡Botón clickeado!"),
-          },
-          "Click me!"
-        ),
-      ]
-    ),
+console.log("✅ NextCard importado:", typeof NextCard);
+console.log("✅ NextButton importado:", typeof NextButton);
 
-    React.createElement(
-      NextCard,
-      {
-        key: "card2",
-        title: "Segunda Tarjeta",
-        variant: "outlined",
-      },
-      "Contenido simple"
-    ),
-  ]);
+// Verificar que son funciones válidas de React
+if (typeof NextCard === "function" && typeof NextButton === "function") {
+  console.log("✅ Ambos componentes son funciones válidas");
+  console.log("✅ Test básico pasado - el paquete funciona correctamente");
+} else {
+  console.error("❌ Error: Los componentes no son funciones válidas");
+  process.exit(1);
 }
