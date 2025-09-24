@@ -1,7 +1,7 @@
 {
   "name": "afro-npm-nextjs",
   "description": "Un paquete de componentes React optimizado para Next.js 15 con App Router",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "license": "MIT",
   "files": [
     "dist/",
