@@ -1,0 +1,24 @@
+{
+  "name": "prueba-npm-nextjs",
+  "version": "1.0.0",
+  "description": "Un paquete de ejemplo con un componente React para usar en Next.js",
+  "main": "index.js",
+  "module": "index.js",
+  "license": "MIT",
+  "author": "Tu Nombre",
+  "keywords": [
+    "nextjs",
+    "react",
+    "componente",
+    "ejemplo"
+  ],
+  "peerDependencies": {
+    "react": ">=18 <20",
+    "react-dom": ">=18 <20"
+  },
+  "files": [
+    "index.js",
+    "MyComponent.js",
+    "README.md"
+  ]
+}
